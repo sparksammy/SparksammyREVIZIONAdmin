@@ -1,3 +1,28 @@
+
+
+
+
+
+
+
+
+
+
+
+
+--A redistribution of https://wearedevs.net/ (But not created by)
+
+--Check out the website for more free scripts
+
+
+
+
+
+
+
+
+
+
 CreateGui = function()
 local NewGuiPart1 = Instance.new("ScreenGui")
 local NewGuiPart2 = Instance.new("Frame")
@@ -8701,5 +8726,3 @@ openScript(scr5)
 scrollBar:Update()
 scrollBarH:Update()
 end)
-
---moony
