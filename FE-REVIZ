@@ -2,7 +2,7 @@
 
 -- Credits to infinite yield, harkinian, dex creators
 
-prefix = ";"
+prefix = ":"
 wait(0.3)
 Commands = {
 	'[-] cmdbar is shown when ; is pressed.',
