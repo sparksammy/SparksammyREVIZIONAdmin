@@ -1,2 +1,2 @@
-# SparksammyREVIZIONAdmin
-Sparksammy's REVIZION FE Admin Commands
+# SparksammyREVIZIONAdmin Core Scripts
+The scripts for REVIZION Admin
