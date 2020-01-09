@@ -1,0 +1,26 @@
+snap="Snap." -- Magic word that snaps everything (Case sensitive)
+undo="Undo." -- Magic word for undoing the snap (Case sensitive)
+-- NOTE: Notice the "." and the capitalization in snap and undo you could change that if you wanted to
+game.Players.LocalPlayer.Chatted:Connect(function(msg)
+if msg==snap then
+for _,v in pairs(game.Workspace:GetChildren()) do
+if v:IsA("BasePart") or v:IsA("Part") or v:IsA("WedgePart") or v:IsA("TrussPart") or v:IsA("VehicleSeat") or v:IsA("Seat") then
+game.ReplicatedStorage.ClientBridge.RequestBlockDeletion:FireServer(v)
+end
+end
+function find(where)
+for _,v in pairs(where:GetChildren()) do
+if v:IsA("Part") then
+game.ReplicatedStorage.ClientBridge.RequestBlockDeletion:FireServer(v)
+end
+find(v)
+end
+end
+find(workspace)
+end
+if msg==undo then
+for i=1,5000 do
+game.ReplicatedStorage.ClientBridge.RequestBlockDeletion:FireServer("Undo")
+end
+end
+end)
