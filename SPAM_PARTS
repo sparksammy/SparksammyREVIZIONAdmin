@@ -3,6 +3,24 @@
 currentPOS = game.Players.LocalPlayer.Character.Head.Position
 while wait(.1) and _G.spamparts == true do
 for _, a in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+--begin hax
+if a:IsA("Tool") then
+a:Clone().Parent = game.Players.LocalPlayer.Backpack
+wait()
+a:Clone().Parent = game.Players.LocalPlayer.Backpack
+wait()
+a:Clone().Parent = game.Players.LocalPlayer.Backpack
+wait()
+a:Clone().Parent = game.Players.LocalPlayer.Backpack
+wait()
+a:Clone().Parent = game.Players.LocalPlayer.Backpack
+wait()
+a:Clone().Parent = game.Players.LocalPlayer.Backpack
+wait()
+a:Clone().Parent = game.Players.LocalPlayer.Backpack
+end
+wait(.1)
+--end clone hax
 if a:IsA("Tool") then
 a.CanBeDropped = true
 game.Players.LocalPlayer.Character.Humanoid:EquipTool(a)
