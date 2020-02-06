@@ -1,27 +1,12 @@
 --SPAM PARTS
 --BY SPARKSAMMY
-currentPOS = game.Players.LocalPlayer.Character.Head.Position
 while wait(.1) and _G.spamparts == true do
 for _, a in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
---begin hax
 if a:IsA("Tool") then
-a:Clone().Parent = game.Players.LocalPlayer.Backpack
-wait()
-a:Clone().Parent = game.Players.LocalPlayer.Backpack
-wait()
-a:Clone().Parent = game.Players.LocalPlayer.Backpack
-wait()
-a:Clone().Parent = game.Players.LocalPlayer.Backpack
-wait()
-a:Clone().Parent = game.Players.LocalPlayer.Backpack
-wait()
-a:Clone().Parent = game.Players.LocalPlayer.Backpack
-wait()
-a:Clone().Parent = game.Players.LocalPlayer.Backpack
+if a ~= nil
+a.Clone().Parent = game.Players.LocalPlayer.Backpack
 end
 wait(.1)
---end clone hax
-if a:IsA("Tool") then
 a.CanBeDropped = true
 game.Players.LocalPlayer.Character.Humanoid:EquipTool(a)
 a.Handle.Mesh:Destroy()
@@ -29,6 +14,5 @@ a.Parent = game.Workspace
 end
 end
 game.Players.LocalPlayer.Character.Humanoid.Health = 0
-wait(6.3)
-game.Players.LocalPlayer.Character:MoveTo(currentPOS)
+wait(6)
 end
