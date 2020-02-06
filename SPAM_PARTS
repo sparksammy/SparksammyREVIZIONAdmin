@@ -1,5 +1,6 @@
 --SPAM PARTS
 --BY SPARKSAMMY
+currentPOS = game.Players.LocalPlayer.Character.Head.Position
 while wait(.1) and _G.spamparts == true do
 for _, a in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
 if a:IsA("Tool") then
@@ -10,5 +11,6 @@ a.Parent = game.Workspace
 end
 end
 game.Players.LocalPlayer.Character.Humanoid.Health = 0
-wait(6)
+wait(6.3)
+game.Players.LocalPlayer.Character:MoveTo(currentPOS)
 end
