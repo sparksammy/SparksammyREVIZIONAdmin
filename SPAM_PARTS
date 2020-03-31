@@ -1,11 +1,9 @@
 --SPAM PARTS
 --BY SPARKSAMMY
+_G.spamparts = true
 while wait(.1) and _G.spamparts == true do
 for _, a in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
 if a:IsA("Tool") then
-if a ~= nil
-a.Clone().Parent = game.Players.LocalPlayer.Backpack
-end
 wait(.1)
 a.CanBeDropped = true
 game.Players.LocalPlayer.Character.Humanoid:EquipTool(a)
@@ -13,6 +11,24 @@ a.Handle.Mesh:Destroy()
 a.Parent = game.Workspace
 end
 end
-game.Players.LocalPlayer.Character.Humanoid.Health = 0
-wait(6)
+--CREDIT TO Uctron BEGIN
+game.Players.LocalPlayer.Character.Humanoid.Name = 1
+local l = game.Players.LocalPlayer.Character["1"]:Clone()
+l.Parent = game.Players.LocalPlayer.Character
+l.Name = "Humanoid"
+wait()
+game.Players.LocalPlayer.Character["1"]:Destroy()
+game.Workspace.CurrentCamera.CameraSubject = game.Players.LocalPlayer.Character
+game.Players.LocalPlayer.Character.Animate.Disabled = true
+wait()
+game.Players.LocalPlayer.Character.Animate.Disabled = false
+game.Players.LocalPlayer.Character.Humanoid.DisplayDistanceType = "None"
+wait()
+local prt = Instance.new("Model", workspace);
+Instance.new("Part", prt).Name="Torso";
+Instance.new("Part", prt).Name="Head";
+Instance.new("Humanoid", prt).Name="Humanoid";
+game.Players.LocalPlayer.Character=prt
+--CREDIT TO Uctron END
+wait(.3)
 end
